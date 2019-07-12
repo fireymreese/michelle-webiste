@@ -3,10 +3,18 @@
 .view-container { 
     height: 100vh;
     overflow: hidden; 
-    background-image: url("../img/wenshu_monastery.jpg");
-    filter: grayscale(100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.home-container {
+  height: 100vh;
+  overflow: hidden; 
+  background-image: 
+  url("../img/wenshu_monastery.jpg");
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;  
 }
 
 .main_background {
@@ -33,6 +41,7 @@
     text-align: center;
     font-size: 40pt;
     font-family: 'Poppins', sans-serif;
+    z-index: 200;
   }
 
   
@@ -52,10 +61,10 @@
 
   .nav_bar li {
     padding: 25px; 
-    font-size: 16pt;
+    font-size: 14pt;
+    font-family: Poppins, sans-serif;
     display: inline;
-    /* color: #000000; */
-    color: #ffffff !important;
+    color: #ffffff;
   }
   
   .nav_bar a {
@@ -65,28 +74,52 @@
 
   footer {
     position: fixed;
-    height: 75px;
+    height: 100px;
     bottom: 0;
     width: 100%;
-}
-
-  /* .footer_main {
-      position: absolute;
-      visibility: hidden;
-      bottom: 50; 
-  }  */
-
-  /* .footer_main p {
-    font-size: 16pt;
-    color: #097054;
   }
 
-  .footer_main:hover {
-    visibility: visible;
-  } */
-  
-  /* @font-face {
-    font-family: mainHeading;
-    src: url(sansation_light.woff);
-  } */
+  footer .connect {
+    width: 300px;
+    float: right;
+    text-decoration-color: #ffffff;
+    right: 0;
+  }
+
+  footer .connect p {
+    margin: 5px;
+    font-family: 'Poppins', sans-serif;    
+    color: #ffffff;
+  }
+
+  .circle-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    vertical-align: middle;
+    padding: 9px;
+    margin: 5px;
+    text-decoration: none;    
+  }
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Linked In */
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  /* Github */
+  .fa-github {
+    background: #221e1b;
+    color: white;
+  }
 
