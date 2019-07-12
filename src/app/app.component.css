@@ -3,11 +3,18 @@
 .view-container { 
     height: 100vh;
     overflow: hidden; 
-    background-image: 
-    url("../img/wenshu_monastery.jpg");
-    filter: grayscale(100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.home-container {
+  height: 100vh;
+  overflow: hidden; 
+  background-image: 
+  url("../img/wenshu_monastery.jpg");
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;  
 }
 
 .main_background {
@@ -34,6 +41,7 @@
     text-align: center;
     font-size: 40pt;
     font-family: 'Poppins', sans-serif;
+    z-index: 200;
   }
 
   
@@ -84,16 +92,17 @@
     color: #ffffff;
   }
 
-  .fa {
-    filter: grayscale(-100%);
-    padding: 20px;
-    font-size: 30px;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    text-decoration: none;
+  .circle-icon {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    vertical-align: middle;
+    padding: 9px;
     margin: 5px;
+    text-decoration: none;    
   }
 
   /* Facebook */
@@ -102,28 +111,15 @@
     color: white;
   }
 
+  /* Linked In */
   .fa-linkedin {
     background: #007bb5;
     color: white;
   }
 
-  /* .footer_main {
-      position: absolute;
-      visibility: hidden;
-      bottom: 50; 
-  }  */
-
-  /* .footer_main p {
-    font-size: 16pt;
-    color: #097054;
+  /* Github */
+  .fa-github {
+    background: #221e1b;
+    color: white;
   }
-
-  .footer_main:hover {
-    visibility: visible;
-  } */
-  
-  /* @font-face {
-    font-family: mainHeading;
-    src: url(sansation_light.woff);
-  } */
 
