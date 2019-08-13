@@ -1,25 +1,15 @@
 <div class="view-container">
     <div class="nav_bar">
       <ul>
-        <li><a routerLink="/education" routerLinkActive="active">Education</a></li>
+        <li><a (click)="onClick('education')">Education</a></li>
         <li>Experience</li>
         <li>Projects</li>
-        <li><a routerLink="/passions">Passions</a></li>
+        <li><a (click)="onClick('passions')">Passions</a></li>
         <li>Contact</li>
       </ul>
     </div>
 
     <router-outlet></router-outlet>
 
-    <footer class=fixed-bottom>
-      <div class="connect">
-        <p>Connect with me on:</p>        
-        <div class="social_media">
-          <a href="https://www.facebook.com/michelle.reese.334" target="_blank" class="fa fa-facebook fa-5x circle-icon"></a>
-          <a href="https://www.linkedin.com/in/michelle-reese-9a979613a/" target="_blank" class="fa fa-linkedin fa-5x circle-icon"></a>
-          <a href="https://github.com/fireymreese" target="_blank" class="fa fa-github fa-5x circle-icon"></a>
-        </div>
-      </div>
-    </footer>
 </div>
 
