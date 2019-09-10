@@ -22,7 +22,6 @@ export class AppComponent {
   }
   
   onClick(route :string) {
-    console.log("hello");
     this.router.navigate([route]);
   }
 }

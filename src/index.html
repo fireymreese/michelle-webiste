@@ -12,6 +12,16 @@
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/6.6.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.6.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.6.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/6.6.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/6.6.0/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
   
 </head>
 <body>
@@ -23,18 +33,39 @@
      https://firebase.google.com/docs/web/setup#config-web-app -->
 
 <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA2Z1mmbCL8WkEDbvlefU2SX-5ubg40Fy0",
-    authDomain: "michelle-personal-website.firebaseapp.com",
-    databaseURL: "https://michelle-personal-website.firebaseio.com",
-    projectId: "michelle-personal-website",
-    storageBucket: "michelle-personal-website.appspot.com",
-    messagingSenderId: "35864754477",
-    appId: "1:35864754477:web:8221b0fdf70186b6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  // // Your web app's Firebase configuration
+  // var firebaseConfig = {
+  //   apiKey: "AIzaSyA2Z1mmbCL8WkEDbvlefU2SX-5ubg40Fy0",
+  //   authDomain: "michelle-personal-website.firebaseapp.com",
+  //   databaseURL: "https://michelle-personal-website.firebaseio.com",
+  //   projectId: "michelle-personal-website",
+  //   storageBucket: "michelle-personal-website.appspot.com",
+  //   messagingSenderId: "35864754477",
+  //   appId: "1:35864754477:web:8221b0fdf70186b6"
+  // };
+  // // Initialize Firebase
+  // firebase.initializeApp(firebaseConfig);
+
+  document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+  });
 </script>
 </body>
 </html>
