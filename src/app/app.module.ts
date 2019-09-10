@@ -8,12 +8,14 @@ import { PassionsComponent } from './passions/passions.component';
 import { PhotographyComponent } from './passions/photography/photography.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { ExperienceComponent } from 'src/app/experience/experience.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EducationComponent,
+    ExperienceComponent,
     PassionsComponent,
     PhotographyComponent
   ],
